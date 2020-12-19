@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { YoutubeapiService } from '../youtubeapi.service';
-import { SearchInterface } from '../search-interface';
 import {DomSanitizer} from '@angular/platform-browser'
 
 @Component({
-  selector: 'app-youtubeonly',
-  templateUrl: './youtubeonly.component.html',
-  styleUrls: ['./youtubeonly.component.css'],
+  selector: 'app-slider',
+  templateUrl: './slider.component.html',
+  styleUrls: ['./slider.component.css']
 })
-export class YoutubeonlyComponent implements OnInit {
+export class SliderComponent implements OnInit {
   collection: any;
   constructor(private video: YoutubeapiService, private sanitizer: DomSanitizer) {}
   ngOnInit(): void {

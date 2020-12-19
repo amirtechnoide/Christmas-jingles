@@ -5,12 +5,15 @@ import {HttpClient} from '@angular/common/http'
   providedIn: 'root'
 })
 export class LyricServiceService {
-  url = 'https://raw.githubusercontent.com/yunweneric/Christmas-jingles/master/database.json';
+  url = 'http://localhost:3000/song1';
     // url = 'https://type.fit/api/quotes';
 
 
   constructor(private http: HttpClient) { }
   getdata(){
     return this.http.get(this.url);
+  }
+  getcurrentlyric(id: any){
+    return this.http.get(`${this.url}/${id}`)
   }
 }
